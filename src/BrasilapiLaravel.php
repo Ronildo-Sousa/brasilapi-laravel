@@ -14,8 +14,14 @@ class BrasilapiLaravel
 
     public PendingRequest $api;
 
+    public string $version;
+
     public function __construct()
     {
-        $this->api = Http::baseUrl(config('brasilapi-laravel.base_url'));
+        $this->version = config('brasilapi-laravel.version');
+
+        $this->api = Http::withHeaders([
+            'Accept' => 'application/json',
+        ])->baseUrl(config('brasilapi-laravel.base_url'));
     }
 }

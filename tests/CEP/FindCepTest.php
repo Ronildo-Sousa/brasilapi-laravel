@@ -29,3 +29,21 @@ it('should be able to find a valid CEP', function () {
         ->and($response->city)
         ->toBe('Blumenau');
 });
+
+test('CEP should be required', function () {
+    $response = BrasilapiLaravel::cep()->find('');
+    $errors = collect($response);
+    expect($response)
+        ->toBeArray()
+        ->and($errors->first())
+        ->toBe('The cep field is required.');
+});
+
+test('CEP should be exactly 8 characters', function () {
+    $response = BrasilapiLaravel::cep()->find('1');
+    $errors = collect($response);
+    expect($response)
+        ->toBeArray()
+        ->and($errors->first())
+        ->toBe('The cep field must be 8 characters.');
+});
