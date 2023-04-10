@@ -1,12 +1,14 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+declare(strict_types=1);
+
+namespace BrasilApi\BrasilapiLaravel\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class BrasilapiLaravelCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'brasilapi-laravel';
 
     public $description = 'My command';
 

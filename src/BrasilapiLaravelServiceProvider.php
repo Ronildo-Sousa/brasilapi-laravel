@@ -1,12 +1,14 @@
 <?php
 
-namespace VendorName\Skeleton;
+declare(strict_types=1);
 
+namespace BrasilApi\BrasilapiLaravel;
+
+use BrasilApi\BrasilapiLaravel\Commands\BrasilapiLaravelCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use VendorName\Skeleton\Commands\SkeletonCommand;
 
-class SkeletonServiceProvider extends PackageServiceProvider
+class BrasilapiLaravelServiceProvider extends PackageServiceProvider
 {
     public function configurePackage(Package $package): void
     {
@@ -16,10 +18,10 @@ class SkeletonServiceProvider extends PackageServiceProvider
          * More info: https://github.com/spatie/laravel-package-tools
          */
         $package
-            ->name('skeleton')
+            ->name('brasilapi-laravel')
             ->hasConfigFile()
             ->hasViews()
-            ->hasMigration('create_skeleton_table')
-            ->hasCommand(SkeletonCommand::class);
+            ->hasMigration('create_brasilapi-laravel_table')
+            ->hasCommand(BrasilapiLaravelCommand::class);
     }
 }
