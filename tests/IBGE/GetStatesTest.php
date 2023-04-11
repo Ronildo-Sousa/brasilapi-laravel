@@ -10,8 +10,7 @@ use Illuminate\Support\Facades\Http;
 
 beforeEach(function () {
     Http::fake([
-        config('brasilapi-laravel.base_url') . '/ibge/uf/' . config('brasilapi-laravel.version')
-        => Http::response([
+        config('brasilapi-laravel.base_url').'/ibge/uf/'.config('brasilapi-laravel.version') => Http::response([
             [
                 'id' => 11,
                 'sigla' => 'RO',
@@ -43,8 +42,7 @@ beforeEach(function () {
                 ],
             ],
         ]),
-        config('brasilapi-laravel.base_url') . '/ibge/uf/' . config('brasilapi-laravel.version') . '/*'
-        => Http::response([
+        config('brasilapi-laravel.base_url').'/ibge/uf/'.config('brasilapi-laravel.version').'/*' => Http::response([
             'id' => 13,
             'sigla' => 'AM',
             'nome' => 'Amazonas',
