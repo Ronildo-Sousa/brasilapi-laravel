@@ -31,8 +31,6 @@ class State extends Endpoint
         $uri = sprintf('/ibge/uf/%s', $this->service->version);
         $response = $this->search($uri);
 
-        return $response->map(function ($state) {
-            return new StateDTO($state);
-        });
+        return $response->map(fn ($state) => new StateDTO($state));
     }
 }
