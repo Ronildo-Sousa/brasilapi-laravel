@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use BrasilApi\BrasilapiLaravel\Endpoints\DTOs\LocationDTO;
+use BrasilApi\BrasilapiLaravel\Endpoints\DTOs\AddressDTO;
 use BrasilApi\BrasilapiLaravel\Facades\BrasilapiLaravel;
 use Illuminate\Support\Facades\Http;
 
@@ -21,7 +21,7 @@ beforeEach(function () {
 it('should be able to find a valid CEP', function () {
     $response = BrasilapiLaravel::cep()->find('89010025');
     expect($response)
-        ->toBeInstanceOf(LocationDTO::class)
+        ->toBeInstanceOf(AddressDTO::class)
         ->and($response->cep)
         ->toBe('89010025')
         ->and($response->state)

@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace BrasilApi\BrasilapiLaravel\Endpoints\DTOs;
 
-class LocationDTO
+class AddressDTO
 {
     public function __construct(
         public readonly string $cep,

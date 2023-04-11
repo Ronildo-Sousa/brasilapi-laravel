@@ -5,12 +5,14 @@ declare(strict_types=1);
 namespace BrasilApi\BrasilapiLaravel;
 
 use BrasilApi\BrasilapiLaravel\Endpoints\CEP\HasCep;
+use BrasilApi\BrasilapiLaravel\Endpoints\IBGE\HasIBGE;
 use Illuminate\Http\Client\PendingRequest;
 use Illuminate\Support\Facades\Http;
 
 class BrasilapiLaravel
 {
     use HasCep;
+    use HasIBGE;
 
     public PendingRequest $api;
 

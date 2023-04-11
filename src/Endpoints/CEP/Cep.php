@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace BrasilApi\BrasilapiLaravel\Endpoints\CEP;
 
-use BrasilApi\BrasilapiLaravel\Endpoints\DTOs\LocationDTO;
+use BrasilApi\BrasilapiLaravel\Endpoints\DTOs\AddressDTO;
 use BrasilApi\BrasilapiLaravel\Endpoints\Endpoint;
 use Illuminate\Support\Facades\Validator;
 use Symfony\Component\HttpFoundation\Response;
@@ -34,7 +34,7 @@ class Cep extends Endpoint
         }
         $response = $response->collect();
 
-        return new LocationDTO(
+        return new AddressDTO(
             $response->get('cep'),
             $response->get('state'),
             $response->get('street'),
