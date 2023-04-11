@@ -4,12 +4,8 @@ declare(strict_types=1);
 
 namespace BrasilApi\BrasilapiLaravel\Endpoints\IBGE;
 
-use BrasilApi\BrasilapiLaravel\Endpoints\Endpoint;
-
-class IBGE extends Endpoint
+class IBGE
 {
-    public string $uri;
-
     public function states(): State
     {
         return new State();
