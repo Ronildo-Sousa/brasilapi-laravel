@@ -10,7 +10,8 @@ use Illuminate\Support\Facades\Http;
 
 beforeEach(function () {
     Http::fake([
-        config('brasilapi-laravel.base_url').'/ibge/uf/*' => Http::response([
+        config('brasilapi-laravel.base_url') . '/ibge/uf/' . config('brasilapi-laravel.version')
+        => Http::response([
             [
                 'id' => 11,
                 'sigla' => 'RO',
@@ -42,6 +43,17 @@ beforeEach(function () {
                 ],
             ],
         ]),
+        config('brasilapi-laravel.base_url') . '/ibge/uf/' . config('brasilapi-laravel.version') . '/*'
+        => Http::response([
+            'id' => 13,
+            'sigla' => 'AM',
+            'nome' => 'Amazonas',
+            'regiao' => [
+                'id' => 1,
+                'sigla' => 'N',
+                'nome' => 'Norte',
+            ],
+        ]),
     ]);
 });
 
@@ -55,4 +67,17 @@ it('should be able to get all states', function () {
         ->toBeInstanceOf(StateDTO::class)
         ->and($firstState->region)
         ->toBeInstanceOf(RegionDTO::class);
+});
+
+it('should be able to get a single state', function () {
+    $state = BrasilapiLaravel::ibge()->states()->find(11);
+
+    expect($state)
+        ->toBeInstanceOf(StateDTO::class)
+        ->and($state->region)
+        ->toBeInstanceOf(RegionDTO::class)
+        ->and($state->name)
+        ->toBe('Amazonas')
+        ->and($state->acronym)
+        ->toBe('AM');
 });

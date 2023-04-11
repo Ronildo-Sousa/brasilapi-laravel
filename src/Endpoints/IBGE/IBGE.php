@@ -19,7 +19,33 @@ class IBGE extends Endpoint
         return $this;
     }
 
-    public function get(int $quantity = null): ?Collection
+    public function find(int $code): ?StateDTO
+    {
+        $this->uri = sprintf('/ibge/uf/%s/%s', $this->service->version, $code);
+
+        $response = $this->service->api->get($this->uri);
+
+        if ($response->status() !== Response::HTTP_OK) {
+            return null;
+        }
+
+        $response = $response->collect();
+
+        $region = new RegionDTO(
+            $response['regiao']['id'],
+            $response['regiao']['sigla'],
+            $response['regiao']['nome'],
+        );
+
+        return new StateDTO(
+            $response['id'],
+            $response['sigla'],
+            $response['nome'],
+            $region
+        );
+    }
+
+    public function get(): ?Collection
     {
         $this->uri = sprintf('/ibge/uf/%s', $this->service->version);
 
