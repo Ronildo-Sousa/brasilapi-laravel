@@ -68,7 +68,7 @@ it('should be able to get all states', function () {
 });
 
 it('should be able to get a single state', function () {
-    $state = BrasilapiLaravel::ibge()->states()->find(11);
+    $state = BrasilapiLaravel::ibge()->states()->find('AM');
 
     expect($state)
         ->toBeInstanceOf(StateDTO::class)
@@ -78,4 +78,11 @@ it('should be able to get a single state', function () {
         ->toBe('Amazonas')
         ->and($state->acronym)
         ->toBe('AM');
+});
+
+it('should not be able to get an invalid state', function () {
+    $state = BrasilapiLaravel::ibge()->states()->find('invalid');
+
+    expect($state)
+        ->toBeNull();
 });
