@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace BrasilApi\BrasilapiLaravel\Endpoints\IBGE;
+namespace BrasilapiLaravel\Endpoints\IBGE;
 
-use BrasilApi\BrasilapiLaravel\Endpoints\DTOs\CityDTO;
-use BrasilApi\BrasilapiLaravel\Endpoints\Endpoint;
-use BrasilApi\BrasilapiLaravel\Endpoints\Traits\HasStateValidation;
+use BrasilapiLaravel\Endpoints\DTOs\CityDTO;
+use BrasilapiLaravel\Endpoints\Endpoint;
+use BrasilapiLaravel\Endpoints\Traits\HasStateValidation;
 use Illuminate\Support\Collection;
 
 class City extends Endpoint

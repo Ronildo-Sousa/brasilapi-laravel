@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace BrasilApi\BrasilapiLaravel\Endpoints\Banks;
+namespace BrasilapiLaravel\Endpoints\Banks;
 
-use BrasilApi\BrasilapiLaravel\Endpoints\DTOs\BankDTO;
-use BrasilApi\BrasilapiLaravel\Endpoints\Endpoint;
+use BrasilapiLaravel\Endpoints\DTOs\BankDTO;
+use BrasilapiLaravel\Endpoints\Endpoint;
 use Illuminate\Support\Collection;
 
 class Bank extends Endpoint

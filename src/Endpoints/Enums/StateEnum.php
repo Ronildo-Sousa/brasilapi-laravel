@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace BrasilApi\BrasilapiLaravel\Endpoints\Enums;
+namespace BrasilapiLaravel\Endpoints\Enums;
 
 enum StateEnum: string
 {

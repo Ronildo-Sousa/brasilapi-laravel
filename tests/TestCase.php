@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace BrasilApi\BrasilapiLaravel\Tests;
+namespace BrasilapiLaravel\Tests;
 
-use BrasilApi\BrasilapiLaravel\BrasilapiLaravelServiceProvider;
+use BrasilapiLaravel\BrasilapiLaravelServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
 
@@ -15,7 +15,7 @@ class TestCase extends Orchestra
         parent::setUp();
 
         Factory::guessFactoryNamesUsing(
-            fn (string $modelName) => 'BrasilApi\\BrasilapiLaravel\\Database\\Factories\\'.class_basename($modelName).'Factory'
+            fn (string $modelName) => 'BrasilapiLaravel\\Database\\Factories\\'.class_basename($modelName).'Factory'
         );
     }
 

@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace BrasilApi\BrasilapiLaravel\Endpoints\Traits;
+namespace BrasilapiLaravel\Endpoints\Traits;
 
-use BrasilApi\BrasilapiLaravel\Endpoints\Enums\StateEnum;
+use BrasilapiLaravel\Endpoints\Enums\StateEnum;
 
 trait HasStateValidation
 {

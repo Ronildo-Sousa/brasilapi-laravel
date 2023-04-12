@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-use BrasilApi\BrasilapiLaravel\Endpoints\DTOs\RegionDTO;
-use BrasilApi\BrasilapiLaravel\Endpoints\DTOs\StateDTO;
-use BrasilApi\BrasilapiLaravel\Facades\BrasilapiLaravel;
+use BrasilapiLaravel\Endpoints\DTOs\RegionDTO;
+use BrasilapiLaravel\Endpoints\DTOs\StateDTO;
+use BrasilapiLaravel\Facades\BrasilapiLaravel;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Http;
 

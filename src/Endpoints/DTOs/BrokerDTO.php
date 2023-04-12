@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace BrasilApi\BrasilapiLaravel\Endpoints\Brokers;
+namespace BrasilapiLaravel\Endpoints\DTOs;
 
 class BrokerDTO
 {

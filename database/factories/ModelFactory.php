@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace BrasilApi\BrasilapiLaravel\Database\Factories;
+namespace BrasilapiLaravel\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 

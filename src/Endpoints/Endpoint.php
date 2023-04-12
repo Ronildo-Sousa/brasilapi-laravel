@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace BrasilApi\BrasilapiLaravel\Endpoints;
+namespace BrasilapiLaravel\Endpoints;
 
-use BrasilApi\BrasilapiLaravel\BrasilapiLaravel;
+use BrasilapiLaravel\BrasilapiLaravel;
 use Illuminate\Support\Collection;
 use Symfony\Component\HttpFoundation\Response;
 

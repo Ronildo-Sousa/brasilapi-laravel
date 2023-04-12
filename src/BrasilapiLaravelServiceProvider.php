@@ -2,9 +2,8 @@
 
 declare(strict_types=1);
 
-namespace BrasilApi\BrasilapiLaravel;
+namespace BrasilapiLaravel;
 
-use BrasilApi\BrasilapiLaravel\Commands\BrasilapiLaravelCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
@@ -19,9 +18,6 @@ class BrasilapiLaravelServiceProvider extends PackageServiceProvider
          */
         $package
             ->name('brasilapi-laravel')
-            ->hasConfigFile()
-            ->hasViews()
-            ->hasMigration('create_brasilapi-laravel_table')
-            ->hasCommand(BrasilapiLaravelCommand::class);
+            ->hasConfigFile();
     }
 }

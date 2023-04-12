@@ -35,13 +35,13 @@
     },
     "autoload": {
         "psr-4": {
-            "BrasilApi\\BrasilapiLaravel\\": "src/",
-            "BrasilApi\\BrasilapiLaravel\\Database\\Factories\\": "database/factories/"
+            "BrasilapiLaravel\\": "src/",
+            "BrasilapiLaravel\\Database\\Factories\\": "database/factories/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "BrasilApi\\BrasilapiLaravel\\Tests\\": "tests/"
+            "BrasilapiLaravel\\Tests\\": "tests/"
         }
     },
     "scripts": {
@@ -61,10 +61,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "BrasilApi\\BrasilapiLaravel\\BrasilapiLaravelServiceProvider"
+                "BrasilapiLaravel\\BrasilapiLaravelServiceProvider"
             ],
             "aliases": {
-                "BrasilapiLaravel": "BrasilApi\\BrasilapiLaravel\\Facades\\BrasilapiLaravel"
+                "BrasilapiLaravel": "BrasilapiLaravel\\Facades\\BrasilapiLaravel"
             }
         }
     },

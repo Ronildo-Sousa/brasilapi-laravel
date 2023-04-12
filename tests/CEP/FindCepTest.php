@@ -2,8 +2,8 @@
 
 declare(strict_types=1);
 
-use BrasilApi\BrasilapiLaravel\Endpoints\DTOs\AddressDTO;
-use BrasilApi\BrasilapiLaravel\Facades\BrasilapiLaravel;
+use BrasilapiLaravel\Endpoints\DTOs\AddressDTO;
+use BrasilapiLaravel\Facades\BrasilapiLaravel;
 use Illuminate\Support\Facades\Http;
 
 beforeEach(function () {

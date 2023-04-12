@@ -2,9 +2,10 @@
 
 declare(strict_types=1);
 
-namespace BrasilApi\BrasilapiLaravel\Endpoints\Brokers;
+namespace BrasilapiLaravel\Endpoints\Brokers;
 
-use BrasilApi\BrasilapiLaravel\Endpoints\Endpoint;
+use BrasilapiLaravel\Endpoints\DTOs\BrokerDTO;
+use BrasilapiLaravel\Endpoints\Endpoint;
 use Illuminate\Support\Collection;
 
 class Broker extends Endpoint

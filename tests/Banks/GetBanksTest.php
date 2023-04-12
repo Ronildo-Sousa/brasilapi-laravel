@@ -2,8 +2,8 @@
 
 declare(strict_types=1);
 
-use BrasilApi\BrasilapiLaravel\Endpoints\DTOs\BankDTO;
-use BrasilApi\BrasilapiLaravel\Facades\BrasilapiLaravel;
+use BrasilapiLaravel\Endpoints\DTOs\BankDTO;
+use BrasilapiLaravel\Facades\BrasilapiLaravel;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Http;
 

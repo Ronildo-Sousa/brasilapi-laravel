@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace BrasilApi\BrasilapiLaravel;
+namespace BrasilapiLaravel;
 
-use BrasilApi\BrasilapiLaravel\Endpoints\Banks\HasBanks;
-use BrasilApi\BrasilapiLaravel\Endpoints\Brokers\HasBrokers;
-use BrasilApi\BrasilapiLaravel\Endpoints\CEP\HasCep;
-use BrasilApi\BrasilapiLaravel\Endpoints\IBGE\HasIBGE;
+use BrasilapiLaravel\Endpoints\Traits\HasBanks;
+use BrasilapiLaravel\Endpoints\Traits\HasBrokers;
+use BrasilapiLaravel\Endpoints\Traits\HasCep;
+use BrasilapiLaravel\Endpoints\Traits\HasIBGE;
 use Illuminate\Http\Client\PendingRequest;
 use Illuminate\Support\Facades\Http;
 
