@@ -23,8 +23,6 @@ class City extends Endpoint
         $uri = sprintf('/ibge/municipios/%s/%s', $this->service->version, $validState);
         $response = $this->search($uri);
 
-        return $response->map(function ($city) {
-            return new CityDTO($city);
-        });
+        return $response->map(fn ($city) => new CityDTO($city));
     }
 }
