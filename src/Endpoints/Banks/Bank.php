@@ -17,4 +17,12 @@ class Bank extends Endpoint
 
         return $response->map(fn ($bank) => new BankDTO($bank));
     }
+
+    public function find(int $code): ?BankDTO
+    {
+        $uri = sprintf('/banks/%s/%s', $this->service->version, $code);
+        $response = $this->search($uri);
+
+        return new BankDTO($response->toArray());
+    }
 }
